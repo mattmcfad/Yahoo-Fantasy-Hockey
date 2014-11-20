@@ -1,0 +1,29 @@
+{
+  "name": "yahoosports",
+  "version": "0.0.0",
+  "description": "yahoo fantasy hockey app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmcfadyen91/Yahoo-Fantasy-Hockey.git"
+  },
+  "keywords": [
+    "yahoo",
+    "fantasy",
+    "hockey"
+  ],
+  "author": "@mattmcfad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmcfadyen91/Yahoo-Fantasy-Hockey/issues"
+  },
+  "homepage": "https://github.com/mmcfadyen91/Yahoo-Fantasy-Hockey",
+  "devDependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.2",
+    "gulp-util": "^3.0.1"
+  }
+}
