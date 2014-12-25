@@ -24,6 +24,8 @@
   "devDependencies": {
     "body-parser": "^1.9.2",
     "express": "^4.10.2",
-    "gulp-util": "^3.0.1"
+    "gulp-util": "^3.0.1",
+    "passport": "^0.2.1",
+    "passport-yahoo-oauth": "^0.1.2"
   }
 }

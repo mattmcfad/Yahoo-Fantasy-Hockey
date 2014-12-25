@@ -1,24 +1,19 @@
 "use strict"
 
 var express = require("express"),
-	bodyParser = require("body-parser");
+	bodyParser = require("body-parser"),
+	util = require("gulp-util");
 
-var util = require("gulp-util");
+var port = process.env.PORT || 8888;
 
 var app = express();
-
-
 app.use(bodyParser.json());
 
 
-
 app.get('/', function(req, res) {
-	res.sendFile(__dirname + "/layouts/index.html");
+	res.sendFile(__dirname + "public/layouts/index.html");
 });
-
-var port = 8181;
 
 app.listen(port, function(){
 	util.log(util.colors.green("node server "), util.colors.magenta("localhost:"+port));
-	//console.log("node server", port);
 })
