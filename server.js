@@ -5,16 +5,21 @@ var express = require("express"),
 	util = require("gulp-util");
 	
 var	app = express();
+var port = process.env.PORT || 8888;
 
 app.engine('jade', require('jade').__express);
-
-var port = process.env.PORT || 8888;
+app.set('views', __dirname + '/public/layouts')
 
 app.use(bodyParser.json());
 
+app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public/layouts"));
+
+
+
 
 app.get('/', function(req, res) {
-	res.render(__dirname + "/public/layouts/index.jade");
+	res.render("index.jade", {dev: {name: "matt"}});
 });
 
 app.listen(port, function(){
