@@ -3,15 +3,18 @@
 var express = require("express"),
 	bodyParser = require("body-parser"),
 	util = require("gulp-util");
+	
+var	app = express();
+
+app.engine('jade', require('jade').__express);
 
 var port = process.env.PORT || 8888;
 
-var app = express();
 app.use(bodyParser.json());
 
 
 app.get('/', function(req, res) {
-	res.sendFile(__dirname + "public/layouts/index.html");
+	res.render(__dirname + "/public/layouts/index.jade");
 });
 
 app.listen(port, function(){
